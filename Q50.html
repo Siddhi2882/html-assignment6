@@ -1,0 +1,14 @@
+<!-- 50) create a text box , get value from the same. do the validation for name & show result in paragraph ( below
+textbox) -->
+
+<input type="text" id="name" placeholder="Enter name">
+<button onclick="validateName()">Check</button>
+<p id="result"></p>
+
+<script>
+function validateName() {
+    const name = document.getElementById("name").value;
+    const isValid = /^[A-Za-z\s]+$/.test(name);
+    document.getElementById("result").innerText = isValid ? "Valid Name" : "Invalid Name";
+}
+</script>
